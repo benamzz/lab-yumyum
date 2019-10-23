@@ -231,17 +231,30 @@ header {background:gray;}
   background:#f07142 linear-gradient(180deg, rgba(240,113,66,0) 0%, rgba(237,72,81,1) 100%);
   color:white;
 }
+@media (min-width:900px) {
+  .features {
+    padding-left:var(--pad);padding-right:var(--pad);
+    padding-top:3em;padding-bottom:3em;
+  }
+}
 
 .features ul {
   padding-left:0; list-style:none; margin-top:0;margin-bottom:0;
 
   display:flex; flex-wrap:wrap;
 }
+@media (min-width:900px) {
+  .features ul {flex-wrap:initial;}
+}
+
 .features li {
   width:50%;
   padding:1em;
 
   text-align:center;
+}
+@media (min-width:900px) {
+  .features li {width:initial; flex:1;}
 }
 
 .features li .bubble {
