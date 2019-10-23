@@ -134,19 +134,36 @@ header {background:gray;}
 ##     ##  #######   ###  ###     ##     #######  
 */
 
+.howto,
+.dishes,
+.cuisine,
+.ads,
+.highlighted,
+.footer {
+  overflow:hidden;
+  padding-left:var(--pad);padding-right:var(--pad);
+}
+
 .howto {
   background:white;
-  overflow: hidden;
 }
 
 .howto ol {
   list-style:none; padding-left:0;
 }
+@media (min-width:900px) {
+  .howto ol {
+    display:flex; justify-content:space-between;
+    padding-bottom:3em;
+  }
+}
 
 .howto li {
   display:flex; align-items:flex-start;
-  padding-left:var(--pad);padding-right:var(--pad);
   margin-top:2.5em;
+}
+@media (min-width:900px) {
+  .howto li {width:30%;}
 }
 .howto li img {width:5.5em;}
 .howto li .caption {margin-left:1.2em;}
@@ -170,13 +187,8 @@ header {background:gray;}
 ########  ####  ######  ##     ## ########  ######  
 */
 
-.dishes,
-.cuisine,
-.ads,
-.highlighted,
-.footer {
-  overflow:hidden;
-  padding-left:var(--pad);padding-right:var(--pad);
+.dishes {
+  /* some shared styles with .howto: cf. .howto */
 }
 
 .card {
@@ -287,7 +299,7 @@ header {background:gray;}
 */
 
 .cuisine {
-  /* some shared styles with .dishes: cf. .dishes */
+  /* some shared styles with .howto: cf. .howto */
 }
 
 /*
@@ -301,7 +313,7 @@ header {background:gray;}
 */
 
 .ads {
-  /* some shared styles with .dishes: cf. .dishes */
+  /* some shared styles with .howto: cf. .howto */
 }
 
 .ads figure {
@@ -331,7 +343,7 @@ header {background:gray;}
 */
 
 .highlighted {
-  /* some shared styles with .dishes: cf. .dishes */
+  /* some shared styles with .howto: cf. .howto */
 }
 
 .highlighted .card .desc {margin-top:1em;}
@@ -347,7 +359,7 @@ header {background:gray;}
 */
 
 .footer {
-  /* some shared styles with .dishes: cf. .dishes */
+  /* some shared styles with .howto: cf. .howto */
 
   background:white;
 
