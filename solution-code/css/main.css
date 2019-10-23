@@ -2,6 +2,7 @@
 
 :root {
   --pad:1em;
+  --gutter:1.5em;
 }
 
 body {
@@ -24,6 +25,14 @@ a {text-decoration:inherit; color:inherit;}
   text-transform:uppercase;
 }
 
+.h2 {
+  text-align:center;
+  font-size:190%;
+  color:#f07142;
+  margin-top:1.7em;margin-bottom:2em;
+  line-height:1.2;
+}
+
 .btn {
   background:#f07142; color:white;
   font-weight:bold;
@@ -36,6 +45,61 @@ button {
 }
 
 /*
+ ######     ###    ########  ########  
+##    ##   ## ##   ##     ## ##     ## 
+##        ##   ##  ##     ## ##     ## 
+##       ##     ## ########  ##     ## 
+##       ######### ##   ##   ##     ## 
+##    ## ##     ## ##    ##  ##     ## 
+ ######  ##     ## ##     ## ########  
+*/
+
+.cards {}
+@media (min-width:900px) {
+  .cards {display:flex; flex-wrap:wrap; justify-content:space-between;}
+  .card {width:calc(25% - 3 * var(--gutter) / 4);}
+}
+
+.card {
+  background:white;
+
+  margin-bottom:2em;
+}
+
+.card {border-radius:.5em;}
+.card .pic {border-top-left-radius:.5em;border-top-right-radius:.5em;}
+
+.card .pic {width:100%;}
+
+.card .details {padding:var(--pad);}
+
+.card .details .title {font-weight:bold;}
+.card .details .subtitle {color:gray;}
+
+.card .desc {display:flex; align-items:center;}
+.card .desc :last-child {margin-left:auto;}
+
+.card .price {font-size:120%; font-weight:bold;}
+
+.card .btn {
+  padding:.5em 1em;
+  background:#5fb038; color:white;
+  font-size:80%;
+}
+
+.card .kudus {
+  padding:var(--pad);
+  border-top:2px solid #dadada;
+}
+
+.card .kudus {display:flex;}
+.card .kudus .stars {margin-right:auto;}
+
+.card .stars img {height:1em;}
+
+
+
+/*
 ##     ## ########    ###    ########  ######## ########  
 ##     ## ##         ## ##   ##     ## ##       ##     ## 
 ##     ## ##        ##   ##  ##     ## ##       ##     ## 
@@ -45,7 +109,7 @@ button {
 ##     ## ######## ##     ## ########  ######## ##     ## 
 */
 
-header {background:gray;}
+.header {background:gray;}
 
 .masthead h1 {margin-top:0;margin-bottom:0;}
 .masthead p {
@@ -111,17 +175,6 @@ header {background:gray;}
 .form .btn {
   text-transform:uppercase;
   font-family:"Intro", sans-serif;
-}
-
-.howto h2,
-.dishes h2,
-.cuisine h2,
-.highlighted h2 {
-  text-align:center;
-  font-size:190%;
-  color:#f07142;
-  margin-top:1.7em;margin-bottom:2em;
-  line-height:1.2;
 }
 
 /*
@@ -190,44 +243,14 @@ header {background:gray;}
 .dishes {
   /* some shared styles with .howto: cf. .howto */
 }
-
-.card {
-  background:white;
-
-  margin-bottom:2em;
+@media (min-width:900px) {
+  .dishes {padding-bottom:3em;}
 }
 
-.card {border-radius:.5em;}
-.card .pic {border-top-left-radius:.5em;border-top-right-radius:.5em;}
-
-.card .pic {width:100%;}
-
-.card .details {padding:var(--pad);}
-
-.card .details .title {font-weight:bold;}
-.card .details .subtitle {color:gray;}
-
-.card .desc {display:flex; align-items:center;}
-.card .desc :last-child {margin-left:auto;}
-
-.card .price {font-size:120%; font-weight:bold;}
-
-.card .btn {
-  padding:.5em 1em;
-  background:#5fb038; color:white;
-  font-size:80%;
+.dishes .card:nth-of-type(n+4) {display:none;}
+@media (min-width:900px) {
+  .dishes .card:nth-of-type(n+4) {display:initial;}
 }
-
-.card .kudus {
-  padding:var(--pad);
-  border-top:2px solid #dadada;
-}
-
-.card .kudus {display:flex;}
-.card .kudus .stars {margin-right:auto;}
-
-
-.card .stars img {height:1em;}
 
 /*
 ######## ########    ###    ######## ##     ## ########  ########  ######  
@@ -301,6 +324,14 @@ header {background:gray;}
 .cuisine {
   /* some shared styles with .howto: cf. .howto */
 }
+@media (min-width:900px) {
+  .cuisine {padding-bottom:3em;}
+}
+
+.cuisine .card:nth-of-type(n+4) {display:none;}
+@media (min-width:900px) {
+  .cuisine .card:nth-of-type(n+4) {display:initial;}
+}
 
 /*
    ###    ########   ######  
@@ -347,6 +378,11 @@ header {background:gray;}
 }
 
 .highlighted .card .desc {margin-top:1em;}
+
+.highlighted .card:nth-of-type(n+3) {display:none;}
+@media (min-width:900px) {
+  .highlighted .card:nth-of-type(n+3) {display:initial;}
+}
 
 /*
 ########  #######   #######  ######## ######## ########  
