@@ -1,128 +1,210 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
-  <title></title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YUM-YUM</title>
   <link rel="stylesheet" href="fonts/Intro/index.css" />
+  <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
   <header>
     <nav>
       <div class="masthead">
-        <h1>YUM-YUM</h1>
+        <img src="images/logo.svg" alt="">
         <p>Local Cuisine Delivered</p>
       </div>
 
-      <div>
-        <a href="javascript:void 0;">Menu</a>
-        <a href="javascript:void 0;">Panier</a>
-      </div>
+
+      <div class="menuH"><a href="#"><img src="images/hamburger.svg" alt="Menu" /></a></div>
+      <div class="menuP"><a href="#"><img src="images/cart.svg" alt="Panier" /></a></div>
+
     </nav>
+    <div class="aroundYou">
+      <h2>Order from restaurants around you</h2>
+      <form action="javascript:void 0;">
+        <label>
+          <img src="images/pin.svg" alt=""><img src="images/bbq.svg" alt="">
+          <input type="text" class="adress" name="address" placeholder="                 Enter your address">
+        </label>
 
-    <h2>Order from restaurants around you</h2>
-    <form action="javascript:void 0;">
-      <label>
-        Enter your address
-        <input type="text" name="address">
-      </label>
-    
-      <label>
-        What would you like
-        <input type="text" name="foodtype">
-      </label>
+        <label>
 
-      <p>
-        <button type="submit">Find a food</button>
-      </p>
-    </form>
-
+          <input type="text" class="foodtype" name="foodtype" placeholder="                 What would you like ?">
+        </label>
+      </form>
+      <button type="submit">Find a food</button>
+    </div>
   </header>
 
   <section>
     <h2>How it works</h2>
+    <div class="howItWorks">
+      <div class="map">
+        <img src="images/map.png" alt="map">
+        <div>
+          <h3>1. Search</h3>
+          <p>Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.</p>
+        </div>
+      </div>
 
-    1. Search
-    Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+      <div class="order">
+        <img src="images/clipboard.png" alt="clipboard">
+        <div>
+          <h3>2. Order</h3>
+          <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.</p>
+        </div>
+      </div>
 
-    2. Order
-    Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
+      <div class="eat">
+        <img src="images/bag.png" alt="bag">
+        <div>
+          <h3>3. Eat</h3>
+          <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.</p>
+        </div>
+      </div>
+    </div>
 
-    3. Eat
-    Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
   </section>
+  <main>
 
-  <section>
-    <h2>Dishes</h2>
+    <section>
+      <h2>Dishes</h2>
 
-    Pasta with Lamb Ragù: Coppa, Boston
-    Christine Quinlan
-    $ 19.95
-    Buy Now
-    5 stars
-    1,679 Ratings
+      <!-- <h4>Pasta with Lamb Ragù: Coppa, Boston</h4>
+      <p>Christine Quinlan</p>
 
-    Pasta with Lamb Ragù: Coppa, Boston
-    Christine Quinlan
-    $ 5.99
-    Buy Now
-    4 stars
-    12 Ratings
+      <h5>$ 19.95</h5>
+      <button type="submit">Buy Now</button>
 
-    Pork Rillette Hand Pies: Olympic Provisions; Portland, OR
-    Joey Pepperoni's Pizza
-    $ 10.80
-    Buy Now
-    4 stars
-    33 Ratings
-  </section>
+      5 stars
+      <p>1,679 Ratings</p> -->
+      <div class="card">
+        <div class="imgGrey"></div>
+        <h4>Pasta with Lamb Ragù: Coppa, Boston</h4>
+        <p>Christine Quinlan</p>
+        <div>
+          <h5>$ 19.95</h5>
+          <button type="submit">Buy Now</button>
+        </div>
+        <div class="ratings">
+          <div class="stars">
+            <img src="images/star.svg" alt="">
+            <img src="images/star.svg" alt="">
+            <img src="images/star.svg" alt="">
+            <img src="images/star.svg" alt="">
+            <img src="images/star.svg" alt="">
+          </div>
+          <p>1,679 Ratings</p>
+        </div>
+      </div>
 
-  <aside>
-    Easy Online
-    No need to pick up the phone.Quick and accurate ordering is here.
+      <div class="card">
+        <div class="imgGrey"></div>
+        <h4>Pasta with Lamb Ragù: Coppa, Boston</h4>
+        <p>Christine Quinlan</p>
+        <div>
+          <h5>$ 5.99</h5>
+          <button type="submit">Buy Now</button>
+        </div>
+        <div class="ratings">
+          <div class="stars">
+            <img src="images/star.svg" alt="">
+            <img src="images/star.svg" alt="">
+            <img src="images/star.svg" alt="">
+            <img src="images/star.svg" alt="">
+            <!-- <img src="images/star.svg" alt=""> -->
+          </div>
+          <p>12 Ratings</p>
+        </div>
+      </div>
 
-    12 000+ Menus
-    Discovery new places — order your usual and throw away those paper
+      <div class="card">
+        <div class="imgGrey"></div>
+        <h4>Pork Rillette Hand Pies: Olympic Provisions; Portland, OR</h4>
+        <p>Joey Pepperoni's Pizza</p>
+        <div>
+          <h5>$ 10.80</h5>
+          <button type="submit">Buy Now</button>
+        </div>
+        <div class="ratings">
+          <div class="stars">
+            <img src="images/star.svg" alt="">
+            <img src="images/star.svg" alt="">
+            <img src="images/star.svg" alt="">
+            <img src="images/star.svg" alt="">
+            <!-- <img src="images/star.svg" alt=""> -->
+          </div>
+          <p>33 Ratings</p>
+        </div>
+      </div>
+    </section>
 
-    Discounts & Deals
-    Get exclusive offers and save on your delivery favorites
+    <aside>
+      <div class="row1">
+        <div>
+          <img src="images/phone.svg" alt="phone">
+          <h2>Easy Online</h2>
+          <p>No need to pick up the phone.Quick and accurate ordering is here.</p>
+        </div>
+        <div>
+          <img src="images/chicken.svg" alt="chicken">
+          <h2>12 000+ Menus</h2>
+          <p>Discovery new places — order your usual and throw away those paper</p>
+        </div>
+      </div>
+      <div class="row2">
+        <div>
+          <img src="images/percent.svg" alt="percent">
+          <h2>Discounts & Deals</h2>
+          <p>Get exclusive offers and save on your delivery favorites</p>
+        </div>
+        <div>
+          <img src="images/mobile.svg" alt="mobile">
+          <h2>Anytime, Anywhere</h2>
+          <p>On-the-go? Che out our conveniant apps for iOS and Android</p>
+        </div>
+      </div>
 
-    Anytime, Anywhere
-    On-the-go? Che out our conveniant apps for iOS and Android
-  </aside>
 
-  <section>
-    <h2>Restaurant by Cuisine</h2>
+    </aside>
 
-    A La Carte
-    189 dishes
+    <section>
+      <h2>Restaurant by Cuisine</h2>
 
-    Fast Food
-    3,750 dishes
+      A La Carte
+      189 dishes
 
-    Italian
-    708 dishes
-  </section>
+      Fast Food
+      3,750 dishes
 
-  <div>banner from hezy theme</div>
+      Italian
+      708 dishes
+    </section>
 
-  <section>
-    <h2>Featured Restaurant</h2>
-    
-    Acquerello
-    Italian
-    View menu
-    Buy Now
-    4 stars
-    31 Reviews
+    <div>banner from hezy theme</div>
 
-    Addision at The Grand Del Mar
-    Contemporary French
-    View menu
-    Buy Now
-    5 stars
-    419 Reviews
-  </section>
+    <section>
+      <h2>Featured Restaurant</h2>
 
+      Acquerello
+      Italian
+      View menu
+      Buy Now
+      4 stars
+      31 Reviews
+
+      Addision at The Grand Del Mar
+      Contemporary French
+      View menu
+      Buy Now
+      5 stars
+      419 Reviews
+    </section>
+  </main>
   <footer>
     Get to know us
     About AlaCartee
@@ -152,4 +234,5 @@
     </address>
   </footer>
 </body>
+
 </html>
